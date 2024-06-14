@@ -1,0 +1,25 @@
+css
+Copy code
+/* src/App.css */
+
+.App {
+  text-align: center;
+  margin-top: 50px;
+}
+
+input {
+  margin: 10px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+button {
+  margin: 10px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+p {
+  font-size: 18px;
+}
