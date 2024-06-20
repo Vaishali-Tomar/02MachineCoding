@@ -1,0 +1,40 @@
+/* src/TabbedInterface.css */
+
+.tabbed-interface {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #f9f9f9;
+  }
+  
+  .tabs {
+    display: flex;
+    justify-content: space-around;
+    background-color: #f1f1f1;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .tab {
+    flex: 1;
+    padding: 10px 20px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #151414;
+    border: none;
+    outline: none;
+    transition: background-color 0.3s;
+  }
+  
+  .tab.active {
+    background-color: #3f51b5;
+    color: white;
+  }
+  
+  .tab-content {
+    padding: 20px;
+    background-color: rgb(129, 119, 119);
+  }
+  

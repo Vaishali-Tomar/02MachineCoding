@@ -1,0 +1,43 @@
+/* src/DahiSizeSelector.css */
+
+.dahi-size-selector {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ebd9d9;
+    border-radius: 8px;
+    background-color: #e13d3d;
+  }
+  
+  .dahi-size-selector h2 {
+    text-align: center;
+  }
+  
+  .dahi-size-selector form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .dahi-size-selector label {
+    display: flex;
+    align-items: center;
+  }
+  
+  .dahi-size-selector button {
+    align-self: center;
+    padding: 10px 20px;
+    background-color: #3f51b5;
+    color: rgb(225, 212, 212);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .dahi-size-selector button:disabled {
+    background-color: #efdfdf;
+    cursor: not-allowed;
+    color: black;
+  }
+  

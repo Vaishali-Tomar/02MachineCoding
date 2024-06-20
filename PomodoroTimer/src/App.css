@@ -1,0 +1,31 @@
+css
+Copy code
+/* App.css */
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+div {
+  text-align: center;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+div > div {
+  font-size: 3em;
+  margin: 20px 0;
+}
+
+button {
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+}

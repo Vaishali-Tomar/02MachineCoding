@@ -1,0 +1,38 @@
+/* App.css */
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+div {
+  text-align: center;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+div > div {
+  margin: 20px 0;
+}
+
+input {
+  margin: 5px;
+  padding: 10px;
+  font-size: 1em;
+}
+
+button {
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+h2, h3 {
+  margin: 10px 0;
+}

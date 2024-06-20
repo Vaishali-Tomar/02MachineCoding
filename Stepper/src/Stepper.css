@@ -1,0 +1,42 @@
+/* src/Stepper.css */
+
+.stepper {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .stepper-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+    background-color: #f5f5f5;
+  }
+  
+  .step {
+    padding: 8px 16px;
+    border-radius: 4px;
+    background-color: #e0e0e0;
+  }
+  
+  .step.active {
+    background-color: #3f51b5;
+    color: white;
+  }
+  
+  .stepper-content {
+    padding: 16px;
+  }
+  
+  .stepper-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+    background-color: #f5f5f5;
+  }
+  

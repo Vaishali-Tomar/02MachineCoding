@@ -1,4 +1,4 @@
-import Reac, { useState } from "react";
+import React, { useState } from "react";
 
 const TemperatureConverter = () => {
   const [celsius, setCelsius] = useState("");
