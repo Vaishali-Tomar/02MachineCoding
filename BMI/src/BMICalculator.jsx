@@ -1,27 +1,27 @@
-import React, {useState} from 'react'
+import React, { useState } from "react";
 
 const BMICalculator = () => {
-    const [height, setHeight] = useState('');
-    const [weight, setWeight] = useState('');
-    const [bmi, setBmi] = useState(null);
-    const [bmiCategory, setBmiCategory] = useState('');
+  const [height, setHeight] = useState("");
+  const [weight, setWeight] = useState("");
+  const [bmi, setBmi] = useState(null);
+  const [bmiCategory, setBmiCategory] = useState("");
 
-    const calculateBMI = () => {
-      if(height > 0 && weight > 0){
-        const heigghtInMeter = height / 100;
-        const bmiValue = (weight /(heigghtInMeter * heigghtInMeter)).toFixed(2);
-        setBmi(bmiValue)
-        determineBMICategory(bmiValue)
-      }
+  const calculateBMI = () => {
+    if(height > 0 && weight > 0){
+      const heightInMeter = height / 100;
+      const bmiValue = (weigth /(heightInMeter * heightInMeter)).toFixed(2);
+      setBmi(bmiValue);
+      deterMineCatogery(bmiValue);
     }
-  const determineBMICategory = (bmi) => {
-    if (bmi < 18.5) {
-      setBmiCategory('Underweight');
-    } else if (bmi >= 18.5 && bmi < 24.9) {
+  }
+  const deterMineCatogery = (bmi) => {
+    if(bmi < 18.5){
+      setBmiCategory('UnderWeight');
+    }else if(bmi > 18.5 && bmi < 24.3){
       setBmiCategory('Healthy Weight');
-    } else if (bmi >= 25 && bmi < 29.9) {
-      setBmiCategory('Overweight');
-    } else if (bmi >= 30) {
+    }else if(bmi >= 25 && bmi < 29.6){
+      setBmiCategory('OverWeigth');
+    }else if (bmi >= 30) {
       setBmiCategory('Obese');
     }
   }
@@ -29,25 +29,35 @@ const BMICalculator = () => {
     <div>
       <h1>BMI calculator</h1>
       <div>
-     <label>
-      Height(cm)
-      <input type="number" value={height} onChange={(e) => setHeight(e.target.value)} min="0" />
-     </label>
-     </div>
-     <div>
-     <label>
-      Height(cm)
-      <input type="number" value={weight} onChange={(e) => setWeight(e.target.value)} min="0" />
-     </label>
-     </div>
-     <button onClick={calculateBMI}>calculate</button>
-     {bmi && (
-      <div>
-         <h2>BMI = {bmi}</h2>
-         <h3>{bmiCategory}</h3>
+        <label>
+          Height(cm)
+          <input
+            type="number"
+            value={height}
+            onChange={(e) => setHeight(e.target.value)}
+            min="0"
+          />
+        </label>
       </div>
-     )}
-     <div>
+      <div>
+        <label>
+          weight(cm)
+          <input
+            type="number"
+            value={weight}
+            onChange={(e) => setWeight(e.target.value)}
+            min="0"
+          />
+        </label>
+      </div>
+      <button onClick={calculateBMI}>calculate</button>
+      {bmi && (
+        <div>
+          <h2>BMI = {bmi}</h2>
+          <h3>{bmiCategory}</h3>
+        </div>
+      )}
+      <div>
         <h2>BMI Weight Ranges</h2>
         <p>Less than 18.5 = Underweight</p>
         <p>Between 18.5 - 24.9 = Healthy Weight</p>
@@ -55,7 +65,7 @@ const BMICalculator = () => {
         <p>Over 30 = Obese</p>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default BMICalculator
+export default BMICalculator;

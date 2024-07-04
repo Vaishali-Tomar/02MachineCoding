@@ -9,37 +9,35 @@ const PomodoroTimer = () => {
 
   useEffect(() => {
     let timer;
-    if (isRunning) {
+    if(!isRunning){
       timer = setInterval(() => {
-        if (seconds === 0) {
-          if (minutes === 0) {
+        if(seconds === 0){
+          if(minutes === 0){
             setIsSession((prev) => !prev);
             setMinutes(isSession ? 5 : 25);
             setSeconds(0);
-          } else {
+          }else {
             setMinutes((prev) => prev - 1);
             setSeconds(59);
           }
-        } else {
+        }else{
           setSeconds((prev) => prev - 1);
         }
       }, 1000);
     }
-
-    return () => clearInterval(timer);
+    return  () => clearInterval(timer)
   }, [isRunning, seconds, minutes, isSession]);
 
   const handleStartPause = () => {
-    setIsRunning((prev) => !prev);
-  };
+    setIsRunning(prev => !prev)
+  }
 
   const handleReset = () => {
     setIsRunning(false);
     setMinutes(25);
     setSeconds(0);
     setIsSession(true);
-  };
-
+  }
   return (
     <div>
       <h1>{isSession ? 'Work Session' : 'Break Session'}</h1>

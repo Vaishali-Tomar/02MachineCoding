@@ -6,15 +6,14 @@ import './DahiSizeSelector.css';
 const DahiSizeSelector = () => {
   const [selectedSize, setSelectedSize] = useState('');
 
-  const handleSizeChange = (event) => {
-    setSelectedSize(event.target.value);
-  };
+  const handleSizeChange = (e) =>{
+    setSelectedSize(e.target.value);
+  }
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const handleSubmit = (e) => {
+    e.preventDefault();
     alert(`You selected: ${selectedSize}`);
-  };
-
+  }
   return (
     <div className="dahi-size-selector">
       <h2>Select Size of Dahi</h2>
