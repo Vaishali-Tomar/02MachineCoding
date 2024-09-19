@@ -28,6 +28,7 @@ const TabbedInterface = () => {
           <button
             key={index}
             classname={`tab ${activeTab === index ? "active" : ""} `}
+            onClick={() => setActiveTab(index)}
           >
             {tab.label}
           </button>
