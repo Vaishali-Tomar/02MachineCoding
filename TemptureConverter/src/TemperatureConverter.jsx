@@ -4,25 +4,24 @@ const TemperatureConverter = () => {
   const [celsius, setCelsius] = useState("");
   const [fahrenheit, setFahrenheit] = useState(null);
 
-  const handleChange = (e) => {
+  const handleChange  = (e) => {
     setCelsius(e.target.value);
-  };
+  }
 
   const handleConvert = () => {
-    const celsiusValue = parseFloat(celsius);
-    if (!isNaN(celsiusValue)) {
-      const fahrenheitValue = (celsiusValue * 9) / 5 + 32;
-      setFahrenheit(fahrenheitValue.toFixed(2));
-    } else {
+    const celciusValue = parseFloat(celsius);
+    if(!isNaN(celciusValue)){
+      const feheriteValue = (celciusValue * 9) / 5 + 32;
+      setFahrenheit(feheriteValue.toFixed(2));
+    }else {
       setFahrenheit("Invalid input");
     }
-  };
+   }
 
-  const handleClear = () => {
+   const handleClear = () => {
     setCelsius("");
     setFahrenheit(null);
   };
-
   return (
     <div>
       <h1>Temperature in celcius</h1>

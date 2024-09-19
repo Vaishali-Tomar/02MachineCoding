@@ -5,18 +5,18 @@ const Stepper = ({steps}) => {
     const [currentStep,setCurrentStep] = useState(0);
 
     const handleNext = () => {
-        if(currentStep< steps.length-1){
-            setCurrentStep(currentStep + 1);
-        }
-    }
+      if(currentStep < steps.length-1){
+        setCurrentStep(currentStep + 1);
+      }
 
-    const handleBack = () => {
-        if(currentStep > 0){
-            setCurrentStep(currentStep -1)
-        }
     }
-    const isLastStep = currentStep === steps.length - 1;
-    const isFirstStep = currentStep === 0;
+    const handleBack = () => {
+      if(currentStep > 0){
+        setCurrentStep(currentStep - 1);
+      }
+    }
+   const isLastStep = currentStep === steps.length-1 ;
+   const isFirstStep = currentStep === 0;
   
   return (
     <div className="stepper">
